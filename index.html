@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Number{
+            border: 1px solid black;
+            height: 50px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        input{
+            height: 20px;
+        }
+        #button_click{
+            border: 1px solid black;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        h3{
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="Number">
+        <input id="Number1" type="text" placeholder="Enter First Number" value="">
+        <input id="Number2" type="text" placeholder="Enter Second Number" value="">
+    </div>
+    <div id="button_click">
+        <button onclick="add()">ADD</button>
+        <button onclick="subtract()">SUBTRACT</button>
+        <button onclick="multiply()">MULTIPLY</button>
+        <button onclick="divide()">DIVIDE</button>
+    </div>
+    <h1>Output</h1>
+    <h3></h3>
+</body>
+<script>
+    function add(){
+        let a=document.getElementById("Number1").value
+        let b=document.getElementById("Number2").value
+        c=Number(a)+Number(b)
+        document.querySelector("h3").innerText=c
+    }
+    function subtract(){
+        let a=document.getElementById("Number1").value
+        let b=document.getElementById("Number2").value
+        c=Number(a)-Number(b)
+        document.querySelector("h3").innerText=c
+    }
+    function multiply(){
+        let a=document.getElementById("Number1").value
+        let b=document.getElementById("Number2").value
+        c=Number(a)*Number(b)
+        document.querySelector("h3").innerText=c
+    }
+    function divide(){
+        let a=document.getElementById("Number1").value
+        let b=document.getElementById("Number2").value
+        c=Number(a)/Number(b)
+        document.querySelector("h3").innerText=c
+    }
+</script>
+</html>
